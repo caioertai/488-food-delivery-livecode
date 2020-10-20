@@ -19,6 +19,10 @@ class EmployeeRepository
     @employees
   end
 
+  def find_by_username(username)
+    @employees.find { |employee| employee.username == username }
+  end
+
   private
 
   def next_id
