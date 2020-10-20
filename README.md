@@ -1,4 +1,6 @@
-- [x] Users should be able to list meals
-- [x] Users should be able to add meals
-- [x] Users should be able to list customers
-- [x] Users should be able to add customers
+- [ ] Employees can login
+- [ ] Managers should be able to list meals
+- [ ] Managers should be able to add meals
+- [ ] Managers should be able to list customers
+- [ ] Managers should be able to add customers
+- [ ] Delivery guys should be able to list their orders
