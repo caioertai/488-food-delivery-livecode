@@ -1,0 +1,4 @@
+- [x] Users should be able to list meals
+- [x] Users should be able to add meals
+- [x] Users should be able to list customers
+- [x] Users should be able to add customers
