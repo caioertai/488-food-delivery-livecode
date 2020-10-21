@@ -1,8 +1,9 @@
 # Direct user intention to the relevant controller action
 class Router
-  def initialize(meals_controller, customers_controller, sessions_controller)
+  def initialize(meals_controller, customers_controller, orders_controller, sessions_controller)
     @meals_controller = meals_controller
     @customers_controller = customers_controller
+    @orders_controller = orders_controller
     @sessions_controller = sessions_controller
     @running = true
     @current_user = nil
@@ -47,9 +48,10 @@ class Router
   def display_manager_menu
     puts "1. List meals" # read all
     puts "2. Add meals" # create
-    # delete            # destroy
     puts "3. List customers"
     puts "4. Add customer"
+    puts "5. List all undelivered orders"
+    puts "6. Add a new order"
     puts "0. To quit"
   end
 
@@ -59,6 +61,8 @@ class Router
     when 2 then @meals_controller.add
     when 3 then @customers_controller.list
     when 4 then @customers_controller.add
+    when 5 then @orders_controller.list_undelivered
+    when 6 then @orders_controller.add
     when 0 then @running = false
     end
   end
